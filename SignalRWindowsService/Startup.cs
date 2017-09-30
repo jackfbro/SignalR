@@ -15,8 +15,8 @@ namespace SignalRChatService
         {
             // 有关如何配置应用程序的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=316888
             // Any connection or hub wire up and configuration should go here
-            //string sqlConnectionString = @"Server=.;Database=SignalRChat;Integrated Security=True;";
-            //GlobalHost.DependencyResolver.UseSqlServer(sqlConnectionString);          
+            string sqlConnectionString = @"Server=.;Database=SignalRChat;uid=sa;pwd=123456;";
+            GlobalHost.DependencyResolver.UseSqlServer(sqlConnectionString);          
             app.UseCors(CorsOptions.AllowAll);
             app.MapSignalR();
         }
